@@ -31,7 +31,7 @@ public class SearchResults extends AppCompatActivity {
         setContentView(R.layout.activity_search_results);
 
         // pass along user's search query
-        searchView = (SearchView) findViewById(R.id.searchView);
+        searchView = (SearchView)findViewById(R.id.searchView);
         Intent intent = getIntent();
         String str = intent.getStringExtra("query");
         searchView.setQuery(str, false);

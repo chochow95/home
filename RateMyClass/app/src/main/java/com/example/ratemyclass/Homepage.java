@@ -20,7 +20,7 @@ public class Homepage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
 
-        searchView = (SearchView) findViewById(R.id.searchView);
+        searchView = (SearchView)findViewById(R.id.searchView);
 
         searchView.setOnQueryTextListener(
                 new SearchView.OnQueryTextListener() {

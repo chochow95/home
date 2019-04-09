@@ -8,8 +8,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+//import android.widget.ImageView;
 import android.widget.TextView;
+
 
 
 import java.util.List;
@@ -48,7 +49,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         holder.textViewRating.setText(String.valueOf(product.getRating()));
         holder.textViewPrice.setText(String.valueOf(product.getPrice()));
 
-        holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(product.getImage()));
+//        holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(product.getImage()));
 
     }
 
@@ -62,7 +63,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
         TextView textViewTitle, textViewShortDesc, textViewRating, textViewPrice;
-        ImageView imageView;
+//        ImageView imageView;
 
         public ProductViewHolder(View itemView) {
             super(itemView);
@@ -71,7 +72,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
             textViewRating = itemView.findViewById(R.id.textViewRating);
             textViewPrice = itemView.findViewById(R.id.textViewPrice);
-            imageView = itemView.findViewById(R.id.imageView);
+//          imageView = itemView.findViewById(R.id.imageView);
         }
     }
 }

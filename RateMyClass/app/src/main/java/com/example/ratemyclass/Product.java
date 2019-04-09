@@ -10,15 +10,15 @@ public class Product {
     private String shortdesc;
     private double rating;
     private double price;
-    private int image;
+//    private int image;
 
-    public Product(int id, String title, String shortdesc, double rating, double price, int image) {
+    public Product(int id, String title, String shortdesc, double rating, double price) {
         this.id = id;
         this.title = title;
         this.shortdesc = shortdesc;
         this.rating = rating;
         this.price = price;
-        this.image = image;
+//        this.image = image; , int image
     }
 
     public int getId() {
@@ -39,7 +39,7 @@ public class Product {
 
     public double getPrice() { return price; }
 
-    public int getImage() {
-        return image;
-    }
+//    public int getImage() {
+//        return image;
+//    }
 }

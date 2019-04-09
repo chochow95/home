@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.ratemyclass">
 
     <application
@@ -9,21 +10,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Ratingclass"></activity>
-        <activity android:name=".Viewrating" />
-        <activity android:name=".AdvancedSearch" />
-        <activity android:name=".Aboutus" />
-        <activity
-            android:name=".SearchResults"
-            android:label="@string/title_activity_search_results"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Homepage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Ratingclass"/>
+        <activity android:name=".Viewrating" />
+        <activity android:name=".AdvancedSearch"
+            android:parentActivityName=".Homepage"/>
+        <activity android:name=".Aboutus"
+            android:parentActivityName=".Homepage"/>
+        <activity
+            android:name=".SearchResults"
+            android:label="@string/title_activity_search_results"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Homepage"
+            tools:targetApi="jelly_bean" />
     </application>
 
 </manifest>

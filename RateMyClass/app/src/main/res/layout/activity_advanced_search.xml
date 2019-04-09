@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFCC33"
     tools:context=".AdvancedSearch">
 
     <Button
@@ -15,6 +16,8 @@
         android:layout_marginTop="8dp"
         android:onClick="gotoHomepage"
         android:text="Back"
+        android:textColor="#FFCC33"
+        android:background="#7A0019"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,6 +31,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="Advanced\n\tSearch"
+        android:textColor="#7A0019"
         android:textSize="45dp"
         android:inputType="textMultiLine"
         android:longClickable="false"
@@ -46,6 +50,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="32dp"
         android:hint="Course Name"
+        android:textColor="#7A0019"
         android:inputType="text|textCapWords"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,6 +65,7 @@
         android:layout_marginTop="24dp"
         android:hint="Course Number"
         android:inputType="number"
+        android:textColor="#7A0019"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
@@ -74,6 +80,7 @@
         android:hint="Department"
         android:inputType="text|textCapWords"
         android:textSize="20dp"
+        android:textColor="#7A0019"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
@@ -87,6 +94,7 @@
         android:hint="Minimum Rating"
         android:inputType="number"
         android:textSize="20dp"
+        android:textColor="#7A0019"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
@@ -98,6 +106,8 @@
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:text="Cancel"
+        android:textColor="#FFCC33"
+        android:background="#7A0019"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
@@ -110,6 +120,8 @@
         android:layout_marginTop="32dp"
         android:onClick="gotoSearchresult"
         android:text="Go!"
+        android:textColor="#FFCC33"
+        android:background="#7A0019"
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
