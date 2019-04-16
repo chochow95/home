@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF"
+    tools:context=".Homepage">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="410dp"
+        android:layout_height="81dp"
+        android:background="#7A0019"
+        android:fontFamily="@font/neutra"
+        android:gravity="center"
+        android:text="RateMyCourse"
+        android:textColor="#FFCC33"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="333dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:background="#DFDFDF"
+        android:focusable="false"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:queryHint="Search for Courses" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="143dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginRight="57dp"
+        android:background="@drawable/round_button"
+        android:fontFamily="@font/neutra"
+        android:onClick="gotoAdvancedSearch"
+        android:text="Advanced Search"
+        android:textAllCaps="false"
+        android:textColor="#7A0019"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="398dp"
+        android:layout_height="382dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="270dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginLeft="64dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginRight="64dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/helneuthin"
+            android:gravity="center"
+            android:text="#UMN Recommendation"
+            android:textColor="#7a0019"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageSwitcher"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--<Button-->
+        <!--android:id="@+id/pre"-->
+        <!--android:layout_width="83dp"-->
+        <!--android:layout_height="34dp"-->
+        <!--android:layout_marginStart="50dp"-->
+        <!--android:layout_marginLeft="50dp"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--android:background="#7A0019"-->
+        <!--android:fontFamily="@font/helneubd"-->
+        <!--android:text="Previous"-->
+        <!--android:textAllCaps="false"-->
+        <!--android:textColor="#FFF"-->
+        <!--android:textSize="10sp"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/imageSwitcher" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/nx"-->
+        <!--android:layout_width="83dp"-->
+        <!--android:layout_height="34dp"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--android:layout_marginEnd="50dp"-->
+        <!--android:layout_marginRight="50dp"-->
+        <!--android:background="#7A0019"-->
+        <!--android:fontFamily="@font/helneubd"-->
+        <!--android:text="Next"-->
+        <!--android:textColor="#FFF"-->
+        <!--android:textSize="10sp"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/imageSwitcher" />-->
+
+        <ImageSwitcher
+            android:id="@+id/imageSwitcher"
+            android:layout_width="301dp"
+            android:layout_height="229dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+        </ImageSwitcher>
+
+        <TextSwitcher
+            android:id="@+id/textSwitcher"
+            android:layout_width="300dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/imageSwitcher"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </TextSwitcher>
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageSwitcher"
+            app:srcCompat="@drawable/arrow_right" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="424dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#7A0019"
+        android:fontFamily="@font/neutrafacecondensed_mediumalt"
+        android:onClick="gotoAboutus"
+        android:text="RateMyCourse© Represent by Csci5115 Team 16"
+        android:textAllCaps="false"
+        android:textColor="#ffff"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+</android.support.constraint.ConstraintLayout>
