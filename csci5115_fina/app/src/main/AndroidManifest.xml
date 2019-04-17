@@ -19,9 +19,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".RateCourse"
-                android:parentActivityName=".Homepage"/>
+                android:parentActivityName=".SearchResults"/>
         <activity android:name=".ViewCourse"
-                  android:parentActivityName=".Homepage"/>
+                  android:parentActivityName=".SearchResults"/>
         <activity android:name=".AdvancedSearch"
             android:parentActivityName=".Homepage"/>
         <activity android:name=".AboutUs"

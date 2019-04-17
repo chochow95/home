@@ -8,11 +8,11 @@
 
     <TextView
         android:id="@+id/textViewTitle"
-        android:layout_width="81dp"
-        android:layout_height="39dp"
+        android:layout_width="79dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:fontFamily="@font/neutrafacecondensed_lightalt"
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="TextView"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/textViewTitle"
@@ -54,10 +54,9 @@
     <Button
         android:id="@+id/buttonRate"
         android:layout_width="63dp"
-        android:layout_height="39dp"
+        android:layout_height="33dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:fontFamily="@font/helneuhv"
@@ -65,10 +64,11 @@
         android:text="Rate"
         android:textAllCaps="false"
         android:textColor="#7A0019"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintHorizontal_bias="0.929"
         app:layout_constraintStart_toEndOf="@+id/textViewAverageRating"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -79,9 +79,9 @@
 
     <TextView
         android:id="@+id/textViewComment"
-        android:layout_width="401dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
         android:background="#7A0019"
         android:fontFamily="@font/helneuthin"
@@ -91,7 +91,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAverageRating" />
 

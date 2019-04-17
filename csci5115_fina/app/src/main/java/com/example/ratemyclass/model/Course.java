@@ -121,16 +121,20 @@ public class Course {
 //
 //        return sum / ratings.size();
 
-        if (getRatings() != null) {
+        if (getRatings() != null && getRatings().size() > 0) {
             List<Long> ratings = getRatings();
 
             double sum = 0;
             for (Long l : ratings)
                 sum += l;
 
-            return sum / ratings.size();
+            Log.d("test", "sum: " + sum);
+            Log.d("test", "size: " + getRatings().size());
+            Log.d("test", "ratings: " + getRatingsString());
+
+            return sum / getRatings().size();
         }
-        return 0;
+        return -1;
     }
 
     public String getTitle() {
@@ -142,6 +146,15 @@ public class Course {
         s.append(getNumber());
         s.append(": ");
         s.append(getName());
+        return s.toString();
+    }
+
+    public String getRatingsString() {
+        StringBuffer s = new StringBuffer();
+        for (Long l : ratings) {
+            s.append(l);
+            s.append(" ");
+        }
         return s.toString();
     }
 }

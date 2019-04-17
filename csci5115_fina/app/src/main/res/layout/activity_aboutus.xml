@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/textView35"
-        android:layout_width="379dp"
-        android:layout_height="57dp"
+        android:layout_width="378dp"
+        android:layout_height="19dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
@@ -113,8 +113,8 @@
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="376dp"
-        android:layout_height="57dp"
+        android:layout_width="378dp"
+        android:layout_height="19dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
@@ -124,8 +124,8 @@
 
     <TextView
         android:id="@+id/textView31"
-        android:layout_width="379dp"
-        android:layout_height="57dp"
+        android:layout_width="381dp"
+        android:layout_height="19dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
@@ -197,8 +197,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:clickable="false"
@@ -231,7 +231,7 @@
         android:text="We are #UMNdriven"
         android:textAllCaps="false"
         android:textColor="#7A0019"
-        android:textSize="45dp"
+        android:textSize="33sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

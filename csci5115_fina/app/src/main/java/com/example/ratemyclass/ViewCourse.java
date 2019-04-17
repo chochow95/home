@@ -39,7 +39,15 @@ public class ViewCourse extends AppCompatActivity {
 
         textViewTitle.setText(course.getTitle());
         textViewName.setText(course.getName());
-        textViewAverageRating.setText(Double.toString(course.getAverageRating()));
+
+        double rating = course.getAverageRating();
+        String ratingStr;
+        if (rating == -1) {
+            ratingStr = "N/A";
+        } else {
+            ratingStr = Double.toString(rating);
+        }
+        textViewAverageRating.setText(ratingStr);
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);

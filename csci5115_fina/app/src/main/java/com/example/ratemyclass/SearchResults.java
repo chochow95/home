@@ -28,7 +28,8 @@ public class SearchResults extends AppCompatActivity {
     List<Course> courseList;
     RecyclerView recyclerView1;
 
-    String searchString;
+    static String searchString = "";
+    String newSearchString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +39,17 @@ public class SearchResults extends AppCompatActivity {
         courseList = new ArrayList<>();
         searchView = findViewById(R.id.searchView);
         Intent intent = getIntent();
-        searchString = intent.getStringExtra("searchString");
+        newSearchString = intent.getStringExtra("searchString");
+
+        if (newSearchString != null) {
+            searchString = newSearchString;
+        }
         searchView.setQuery(searchString, false);
 
-        final String[] keywords = searchString.split(" ");
+        Log.d("test", "searchString: " + searchString);
+
+        final String[] keywords = searchString.trim().split(" ");
+        final int minRating =intent.getIntExtra("minRating", 0);
 
         mCourseReference = FirebaseDatabase.getInstance().getReference("courses");
 
@@ -49,11 +57,20 @@ public class SearchResults extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    Course course = snapshot.getValue(Course.class);
 
-                    for (int i = 0; i < keywords.length; i++) {
-                        Course course = snapshot.getValue(Course.class);
-                        if (course.toString().toLowerCase().contains(keywords[i].toLowerCase()))
+                    int i = 0;
+                    double avgRating = course.getAverageRating();
+                    boolean added = false;
+                    String courseTitle = course.toString().toLowerCase();
+
+                    while (i < keywords.length && !added) {
+                        if ((searchString == null || searchString.equals("") || courseTitle.contains(keywords[i].toLowerCase()))
+                                && (minRating == 0 || avgRating >= minRating)) {
                             courseList.add(course);
+                            added = true;
+                        }
+                        i++;
                     }
                 }
 
@@ -80,7 +97,8 @@ public class SearchResults extends AppCompatActivity {
                     @Override
                     public boolean onQueryTextSubmit(String query) {
                         Intent intent = new Intent(getApplicationContext(), SearchResults.class);
-                        intent.putExtra("query", query);
+                        intent.putExtra("searchString", query);
+                        finish();
                         startActivity(intent);
                         return true;
                     }

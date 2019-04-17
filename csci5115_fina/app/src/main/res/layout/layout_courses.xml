@@ -30,7 +30,7 @@
                 android:gravity="center"
                 android:text="4.7"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
-                android:textColor="@color/colorAccent"
+                android:textColor="#fff"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/textViewName"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -87,9 +87,6 @@ public class Homepage extends AppCompatActivity {
             }
         });
 
-
-
-
         searchView.setOnQueryTextListener(
                 new SearchView.OnQueryTextListener() {
                     @Override
@@ -106,10 +103,7 @@ public class Homepage extends AppCompatActivity {
                     }
                 }
         );
-
-
     }
-
 
     public void gotoAdvancedSearch (View view){
         Intent intent = new Intent(this, AdvancedSearch.class);

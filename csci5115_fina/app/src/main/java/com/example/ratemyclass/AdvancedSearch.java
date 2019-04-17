@@ -36,8 +36,6 @@ public class AdvancedSearch extends AppCompatActivity {
         imageButton3 = (ImageButton) findViewById(R.id.imageButton3);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
 
-
-
         imageButton3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // get contents of all textviews and send to search results
@@ -52,6 +50,7 @@ public class AdvancedSearch extends AppCompatActivity {
                 String[] sb = {name, number, department};
 
                 intent.putExtra("searchString", TextUtils.join(" ", sb));
+                intent.putExtra("minRating", Integer.parseInt(minRating));
 
                 startActivity(intent);
             }

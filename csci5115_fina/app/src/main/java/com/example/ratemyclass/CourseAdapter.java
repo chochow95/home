@@ -44,6 +44,15 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
         holder.textViewTitle.setText(course.getTitle());
         holder.textViewName.setText(course.getName());
 
+        double rating = course.getAverageRating();
+        String ratingStr;
+        if (rating == -1) {
+            ratingStr = "N/A";
+        } else {
+            ratingStr = Double.toString(rating);
+        }
+        holder.textViewRating.setText(ratingStr);
+
         holder.buttonView.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(context, ViewCourse.class);

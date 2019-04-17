@@ -3,6 +3,7 @@ package com.example.ratemyclass;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RatingBar;
@@ -34,7 +35,7 @@ public class RateCourse extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ratingclass);
-        final TextView textView8 = (TextView) findViewById(R.id.textView8);
+        final TextView textView8 = findViewById(R.id.textView8);
 
         Intent intent = getIntent();
         Gson gson = new Gson();
@@ -80,7 +81,6 @@ public class RateCourse extends AppCompatActivity {
                 }
             }
         });
-
     }
 
 //    public void gotoSearchResults (View view){
@@ -88,9 +88,11 @@ public class RateCourse extends AppCompatActivity {
 //        startActivity(intent);
 //    }
 
-    public void gotoSubmitRating (View view){
+    public void gotoSubmitRating (View view) {
         float rating = ratingBar.getRating();
         String comment = editText.getText().toString();
+
+        Log.d("test", "rating: " + rating);
 
         List<Long> ratingsOld = course.getRatings();
         ratingsOld.add((long) rating);

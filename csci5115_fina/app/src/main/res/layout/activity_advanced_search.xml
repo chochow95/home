@@ -6,23 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".AdvancedSearch">
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="45dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="192dp"
-        android:layout_marginRight="192dp"
-        android:background="#fff"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3"
-        app:srcCompat="@drawable/reset" />
-
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="448dp"
-        android:layout_height="66dp"
+        android:layout_width="0dp"
+        android:layout_height="69dp"
         android:background="#FFCC33"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -39,8 +26,8 @@
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="0dp"
-            android:layout_marginEnd="298dp"
-            android:layout_marginRight="298dp"
+            android:layout_marginEnd="262dp"
+            android:layout_marginRight="262dp"
             android:layout_marginBottom="0dp"
             android:background="#FFCC33"
             app:srcCompat="@drawable/umnpic" />
@@ -52,9 +39,9 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="156dp"
-            android:layout_marginRight="156dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="115dp"
+            android:layout_marginRight="115dp"
             android:fontFamily="@font/neutrafacecondensed_bold"
             android:gravity="center"
             android:text="Courses"
@@ -136,8 +123,8 @@
 
         <EditText
             android:id="@+id/editViewNumber"
-            android:layout_width="150dp"
-            android:layout_height="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -153,8 +140,8 @@
 
         <EditText
             android:id="@+id/editViewName"
-            android:layout_width="150dp"
-            android:layout_height="70dp"
+            android:layout_width="146dp"
+            android:layout_height="61dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="27dp"
             android:layout_marginLeft="27dp"
@@ -169,17 +156,17 @@
 
         <EditText
             android:id="@+id/editViewDept"
-            android:layout_width="150dp"
-            android:layout_height="70dp"
+            android:layout_width="137dp"
+            android:layout_height="68dp"
             android:layout_alignEnd="@+id/editViewMinRating"
             android:layout_alignRight="@+id/editViewMinRating"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="27dp"
-            android:layout_marginLeft="27dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginLeft="29dp"
             android:layout_marginTop="32dp"
-            android:layout_marginEnd="-177dp"
-            android:layout_marginRight="-177dp"
-            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="-166dp"
+            android:layout_marginRight="-166dp"
+            android:layout_marginBottom="19dp"
             android:layout_toEndOf="@+id/editViewMinRating"
             android:layout_toRightOf="@+id/editViewMinRating"
             android:fontFamily="@font/helneuhv"
@@ -190,15 +177,15 @@
 
         <EditText
             android:id="@+id/editViewMinRating"
-            android:layout_width="150dp"
-            android:layout_height="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="29dp"
             android:layout_marginLeft="29dp"
             android:layout_marginTop="32dp"
-            android:layout_marginBottom="14dp"
+            android:layout_marginBottom="19dp"
             android:fontFamily="@font/helneuhv"
             android:hint="Minimum Rating"
             android:inputType="number"
@@ -209,59 +196,43 @@
     <RelativeLayout
         android:layout_width="409dp"
         android:layout_height="49dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="64dp"
         android:background="#7A0019"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
 
         <ImageButton
             android:id="@+id/imageButton3"
-            android:layout_width="176dp"
-            android:layout_height="36dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
+            android:layout_width="192dp"
+            android:layout_height="35dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="217dp"
-            android:layout_marginLeft="217dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginBottom="6dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@+id/imageButton"
+            android:layout_toRightOf="@+id/imageButton"
             android:background="#7A0019"
             android:scaleType="centerInside"
             app:srcCompat="@drawable/search" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="216dp"
-            android:layout_height="match_parent"
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="186dp"
+            android:layout_height="37dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="0dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginTop="3dp"
             android:background="#7A0019"
-            android:fontFamily="@font/helneulight"
-            android:gravity="center"
-            android:text="Search"
-            android:textColor="#fff"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/reset"
+            tools:layout_editor_absoluteX="140dp"
+            tools:layout_editor_absoluteY="440dp" />
 
     </RelativeLayout>
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="53dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginLeft="172dp"
-        android:fontFamily="@font/helneuhv"
-        android:gravity="center"
-        android:text="Clear"
-        android:textColor="@color/browser_actions_title_color"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
 </android.support.constraint.ConstraintLayout>
